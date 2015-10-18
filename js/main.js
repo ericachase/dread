@@ -1,9 +1,10 @@
 function blinker()
 {
-    if(document.getElementById("blink"))
-    {
-        var d = document.getElementById("blink") ;
-        d.style.color= (d.style.color=='black'?'white':'black');
-        setTimeout('blinker()', 500);
-    }
+	for (i=0;i<100;i++) {
+	    if(document.getElementsByClassName('blink')[i]) {
+	        var d = document.getElementsByClassName('blink')[i] ;
+	        d.style.color= (d.style.color=='black'?'white':'black');
+	        setTimeout('blinker()', 500);
+	    }
+	};
 }
